@@ -21,11 +21,7 @@ FieldInfoDisplay.setFruitType = Utils.prependedFunction(FieldInfoDisplay.setFrui
 function AdditionalFieldInfo:onFieldDataUpdateFinished(data)
 	if data == nil then return; end
 
-	-- if self.displayDebug == nil  then self.displayDebug = true end
-	-- if self.displayDebug then
-	-- 	DebugUtil.printTableRecursively(g_i18n, " ", 1, 2);
-	-- 	self.displayDebug = false
-	-- end
+	if self.currentField == nil then self.currentField = 1 end
 
 	self:clearCustomText()
 	for _, farmLand in pairs(g_fieldManager.farmlandIdFieldMapping) do
@@ -34,40 +30,44 @@ function AdditionalFieldInfo:onFieldDataUpdateFinished(data)
 		local fieldAreaSum = 0.
 		local farmLandPrice = 0.
 		local isOwned = false
-		for _, field in pairs(farmLand) do
+		for fieldIndex, field in pairs(farmLand) do
 			if field.farmland.id == data.farmlandId then
-				bFound = true
-				local fieldArea =  g_i18n:formatArea(field.fieldArea, 2)
-				fieldAreaSum = fieldAreaSum + field.fieldArea
-				farmLandArea =  g_i18n:formatArea(field.farmland.areaInHa, 2)
-				farmLandPrice = field.farmland.price
-				isOwned = field.farmland.isOwned
-				local Field_xx_Area = string.format(g_i18n:getText("additionalFieldInfo_FIELD_AREA"), field.fieldId)
-				-- Display Area of each field in the current land
-				self:addCustomText(Field_xx_Area, fieldArea)
-				if self.potentialHarvestQty ~= nil and self.fruitType ~= nil then
-					-- local oldmultiplier = g_currentMission:getHarvestScaleMultiplier(self.fruitType, data.fertilizerFactor, data.plowFactor, data.cultivatorFactor, data.weedFactor)
-					-- print("oldmultiplier "..tostring(oldmultiplier))
-					local multiplier = g_currentMission:getHarvestScaleMultiplier(self.fruitType, data.fertilizerFactor, data.needsPlowFactor, data.needsLimeFactor, data.weedFactor)
-					multiplier = 1.1 * multiplier -- Add 10% more for now since it looks like prediction are always less than real yield
-					-- print("multiplier "..tostring(multiplier))
-					local fillType = self.fruitTypeManager:getFillTypeByFruitTypeIndex(self.fruitType.index)
-					local massPerLiter = fillType.massPerLiter
+				if self.currentField > #farmLand then self.currentField = 1 end
+				if fieldIndex == self.currentField then
+					bFound = true
+					local fieldArea =  g_i18n:formatArea(field.fieldArea, 2)
+					fieldAreaSum = fieldAreaSum + field.fieldArea
+					farmLandArea =  g_i18n:formatArea(field.farmland.areaInHa, 2)
+					farmLandPrice = field.farmland.price
+					isOwned = field.farmland.isOwned
+					local Field_xx_Area = string.format(g_i18n:getText("additionalFieldInfo_FIELD_AREA"), field.fieldId)
+					-- Display Area of each field in the current land
+					self:addCustomText(Field_xx_Area, fieldArea)
+					if self.potentialHarvestQty ~= nil and self.fruitType ~= nil then
+						-- local oldmultiplier = g_currentMission:getHarvestScaleMultiplier(self.fruitType, data.fertilizerFactor, data.plowFactor, data.cultivatorFactor, data.weedFactor)
+						-- print("oldmultiplier "..tostring(oldmultiplier))
+						local multiplier = g_currentMission:getHarvestScaleMultiplier(self.fruitType, data.fertilizerFactor, data.needsPlowFactor, data.needsLimeFactor, data.weedFactor)
+						multiplier = 1.1 * multiplier -- Add 10% more for now since it looks like prediction are always less than real yield
+						-- print("multiplier "..tostring(multiplier))
+						local fillType = self.fruitTypeManager:getFillTypeByFruitTypeIndex(self.fruitType.index)
+						local massPerLiter = fillType.massPerLiter
 
-					-- Display Potential harvest quantity
-					local Potential_Harvest = g_i18n:getText("additionalFieldInfo_POTENTIAL_HARVEST")
-					local potentialHarvestQty = self.potentialHarvestQty * field.fieldArea * multiplier * 10000 -- ha to sqm
-					self:addCustomText(Potential_Harvest, g_i18n:formatVolume(potentialHarvestQty, 0))
+						-- Display Potential harvest quantity
+						local Potential_Harvest = g_i18n:getText("additionalFieldInfo_POTENTIAL_HARVEST")
+						local potentialHarvestQty = self.potentialHarvestQty * field.fieldArea * multiplier * 10000 -- ha to sqm
+						self:addCustomText(Potential_Harvest, g_i18n:formatVolume(potentialHarvestQty, 0))
 
-					-- Display Potential yield
-					local Potential_Yield = g_i18n:getText("additionalFieldInfo_POTENTIAL_YIELD")
-					local potentialYield = (potentialHarvestQty * massPerLiter) / g_i18n:getArea(field.fieldArea)
-					self:addCustomText(Potential_Yield, string.format("%1.2f T/"..tostring(g_i18n:getAreaUnit()), potentialYield))
+						-- Display Potential yield
+						local Potential_Yield = g_i18n:getText("additionalFieldInfo_POTENTIAL_YIELD")
+						local potentialYield = (potentialHarvestQty * massPerLiter) / g_i18n:getArea(field.fieldArea)
+						self:addCustomText(Potential_Yield, string.format("%1.2f T/"..tostring(g_i18n:getAreaUnit()), potentialYield))
 
+					end
 				end
 			end
 		end
 		if bFound then
+			self.currentField = self.currentField + 1
 			local Farm_Land_Area = g_i18n:getText("additionalFieldInfo_FARMLAND_AREA")
 			-- Display Current land area
 			self:addCustomText(Farm_Land_Area, farmLandArea)
