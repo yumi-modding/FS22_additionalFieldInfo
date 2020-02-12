@@ -91,7 +91,7 @@ Naprawione w v1.0.1.1
 			<fr>Récolte potentielle</fr>
 			<en>Potential harvest quantity</en>
 			<de>Potenzielle Erntemenge</de>
-			<pl>Przypuszczalna ilość zbiorów</pl>
+			<pl>Potencjalna ilość zbiorów</pl>
 		</text>
 		<text name="additionalFieldInfo_POTENTIAL_YIELD">
 			<fr>Rendement potentiel</fr>
