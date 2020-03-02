@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="47">
     <author>yumi</author>
-    <version>1.0.1.1</version>		
+    <version>1.0.1.2</version>		
 	<title>
         <en>Additional Field Info</en>
 		<fr>Informations De Champ Supplémentaires</fr>
@@ -20,6 +20,8 @@ New in v1.0.1.0
   - Potential harvest quantity and yield added
 Fixed in v1.0.1.1
   - Manage farmlands with several fields by showing them one by one after each refresh
+New in v1.0.1.2
+  - Adding polish translation
 ]]></en>
 		<fr><![CDATA[
 Affiche des informations supplémentaires dans le panneau lorsque vous parcourez un champ à pied:
@@ -33,6 +35,8 @@ New in v1.0.1.0
   - Ajout de récolte et rendement potentiel
 Fixed in v1.0.1.1
   - Gestion des terrains contenant plusieurs champs en affichant les informations de chacun alternativement
+New in v1.0.1.2
+  - Ajout de la traduction polonaise
 ]]></fr>
 		<de><![CDATA[
 Zeigen Sie zusätzliche Informationen im Feldinfofenster an, wenn Sie durch ein Feld gehen:
@@ -46,6 +50,8 @@ New in v1.0.1.0
   - Potenzielle Erntemenge und Ertrag hinzugefügt
 Fixed in v1.0.1.1
   - Verwalten Sie Ackerland mit mehreren Feldern, indem Sie diese nach jeder Aktualisierung einzeln anzeigen
+New in v1.0.1.2
+  - Polnische Übersetzung hinzufügen
 ]]></de>
  <pl><![CDATA[
 Wyświetlaj dodatkowe informacje o polu na panelu informacyjnym podczas chodzenia po polu:
@@ -59,6 +65,8 @@ Nowe w  v1.0.1.0
   - Dodano przypuszczalną ilość zbiorów i potencjalny zysk
 Naprawione w v1.0.1.1
   -  Zarzadzaj gruntami o wielu polach poprzez pokazywanie ich jeden za drugim w trybie odświeżania
+Nowe w  v1.0.1.2
+  -  Dodawanie polskiego tłumaczenia
 ]]></pl>
     </description>
 	<iconFilename>icon_AdditionalFieldInfo.dds</iconFilename>
