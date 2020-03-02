@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="47">
     <author>yumi</author>
     <version>1.0.1.1</version>		
 	<title>
-        <en>Additional field info</en>
-		<fr>Informations de champ supplémentaires</fr>
+        <en>Additional Field Info</en>
+		<fr>Informations De Champ Supplémentaires</fr>
 		<de>Zusätzliche Feldinfo</de>
     </title>
     <description>
@@ -20,7 +20,7 @@ New in v1.0.1.0
   - Potential harvest quantity and yield added
 Fixed in v1.0.1.1
   - Manage farmlands with several fields by showing them one by one after each refresh
-		]]></en>
+]]></en>
 		<fr><![CDATA[
 Affiche des informations supplémentaires dans le panneau lorsque vous parcourez un champ à pied:
   - Superficie de chaque champ du terrain actuel
@@ -33,7 +33,7 @@ New in v1.0.1.0
   - Ajout de récolte et rendement potentiel
 Fixed in v1.0.1.1
   - Gestion des terrains contenant plusieurs champs en affichant les informations de chacun alternativement
-		]]></fr>
+]]></fr>
 		<de><![CDATA[
 Zeigen Sie zusätzliche Informationen im Feldinfofenster an, wenn Sie durch ein Feld gehen:
   - Fläche jedes Feldes im aktuellen Land
@@ -46,7 +46,20 @@ New in v1.0.1.0
   - Potenzielle Erntemenge und Ertrag hinzugefügt
 Fixed in v1.0.1.1
   - Verwalten Sie Ackerland mit mehreren Feldern, indem Sie diese nach jeder Aktualisierung einzeln anzeigen
-		]]></de>		
+]]></de>
+ <pl><![CDATA[
+Wyświetlaj dodatkowe informacje o polu na panelu informacyjnym podczas chodzenia po polu:
+  - Teren pola na danym grunucie
+  - Teren danego gruntu
+  - Cenę za  ha (za akr) terenu po kultywacji na nieposiadanych ziemiach 
+  - Potencjalny zysk i przypuszczalną ilość zbiorów na polach gotowych na zbiory
+
+==== LISTA ZMIAN ====
+Nowe w  v1.0.1.0
+  - Dodano przypuszczalną ilość zbiorów i potencjalny zysk
+Naprawione w v1.0.1.1
+  -  Zarzadzaj gruntami o wielu polach poprzez pokazywanie ich jeden za drugim w trybie odświeżania
+]]></pl>
     </description>
 	<iconFilename>icon_AdditionalFieldInfo.dds</iconFilename>
     <multiplayer supported="true"/>
@@ -60,26 +73,31 @@ Fixed in v1.0.1.1
 			<fr>Superficie du champ %d</fr>
 			<en>Field %d Area</en>
 			<de>Feld %d Fläche</de>
+			<pl>Pole nr %d</pl>
 		</text>
 		<text name="additionalFieldInfo_FARMLAND_AREA">
 			<fr>Superficie du terrain</fr>
 			<en>Land Area</en>
 			<de>Land Fläche</de>
+			<pl>Grunt</pl>
 		</text>
 		<text name="additionalFieldInfo_PRICE_ON_AREA">
 			<fr>Prix à l'%s</fr>
 			<en>Price per %s</en>
 			<de>Preis pro %s</de>
+			<pl>Cena za %s</pl>
 		</text>
 		<text name="additionalFieldInfo_POTENTIAL_HARVEST">
 			<fr>Récolte potentielle</fr>
 			<en>Potential harvest quantity</en>
 			<de>Potenzielle Erntemenge</de>
+			<pl>Potencjalna ilość zbiorów</pl>
 		</text>
 		<text name="additionalFieldInfo_POTENTIAL_YIELD">
 			<fr>Rendement potentiel</fr>
 			<en>Potential yield</en>
 			<de>Möglicher Ertrag</de>
+			<pl>Potencjalny zysk</pl>
 		</text>
 	</l10n>
 
