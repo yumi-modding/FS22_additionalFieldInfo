@@ -68,6 +68,19 @@ Naprawione w v1.0.1.1
 Nowe w  v1.0.1.2
   -  Dodawanie polskiego tłumaczenia
 ]]></pl>
+        <es><![CDATA[
+Muestra información adicional sobre el campo que estás:
+  - Área de cada campo en el terreno actual
+  - Área de la zona actual
+  - Precio por ha (per ac) del área cultivada en tierras que no son de su propiedad.
+  - Cantidad potencial de cosecha y rendimiento en campos listos para cosechar
+
+==== CHANGELOG ====
+Nuevo en v1.0.1.0
+  - Añadida Cantidad potencial de cosecha y rendimiento
+Arreglado en v1.0.1.1
+  - Administre tierras de cultivo con varios campos mostrándolos uno por uno después de cada actualización.
+]]></es>
     </description>
 	<iconFilename>icon_AdditionalFieldInfo.dds</iconFilename>
     <multiplayer supported="true"/>
@@ -82,30 +95,35 @@ Nowe w  v1.0.1.2
 			<en>Field %d Area</en>
 			<de>Feld %d Fläche</de>
 			<pl>Pole nr %d</pl>
+			<es>Area del campo %d</es>
 		</text>
 		<text name="additionalFieldInfo_FARMLAND_AREA">
 			<fr>Superficie du terrain</fr>
 			<en>Land Area</en>
 			<de>Land Fläche</de>
 			<pl>Grunt</pl>
+			<es>Area de la parcela</es>
 		</text>
 		<text name="additionalFieldInfo_PRICE_ON_AREA">
 			<fr>Prix à l'%s</fr>
 			<en>Price per %s</en>
 			<de>Preis pro %s</de>
 			<pl>Cena za %s</pl>
+			<es>Precio por %s</es>
 		</text>
 		<text name="additionalFieldInfo_POTENTIAL_HARVEST">
 			<fr>Récolte potentielle</fr>
 			<en>Potential harvest quantity</en>
 			<de>Potenzielle Erntemenge</de>
 			<pl>Potencjalna ilość zbiorów</pl>
+			<es>A cosechar aprox.</es>
 		</text>
 		<text name="additionalFieldInfo_POTENTIAL_YIELD">
 			<fr>Rendement potentiel</fr>
 			<en>Potential yield</en>
 			<de>Möglicher Ertrag</de>
 			<pl>Potencjalny zysk</pl>
+			<es>Posible rendimiento</es>
 		</text>
 	</l10n>
 
