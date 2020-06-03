@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="47">
     <author>yumi</author>
-    <version>1.0.1.2</version>		
+    <version>1.0.2.0</version>		
 	<title>
         <en>Additional Field Info</en>
 		<fr>Informations De Champ Supplémentaires</fr>
@@ -21,8 +21,10 @@ New in v1.0.1.0
 Fixed in v1.0.1.1
   - Manage farmlands with several fields by showing them one by one after each refresh
 New in v1.0.1.2
-  - Adding polish translation
-]]></en>
+  - Adding polish and spanish translation
+New in v1.0.2.0
+  - Land area displayed in Map overview land screen
+		]]></en>
 		<fr><![CDATA[
 Affiche des informations supplémentaires dans le panneau lorsque vous parcourez un champ à pied:
   - Superficie de chaque champ du terrain actuel
@@ -36,8 +38,10 @@ New in v1.0.1.0
 Fixed in v1.0.1.1
   - Gestion des terrains contenant plusieurs champs en affichant les informations de chacun alternativement
 New in v1.0.1.2
-  - Ajout de la traduction polonaise
-]]></fr>
+  - Ajout de la traduction polonaise et espagnole
+New in v1.0.2.0
+  - Superficie du terrain affichée dans l'écran des terrains du menu Aperçu de la carte
+		]]></fr>
 		<de><![CDATA[
 Zeigen Sie zusätzliche Informationen im Feldinfofenster an, wenn Sie durch ein Feld gehen:
   - Fläche jedes Feldes im aktuellen Land
@@ -51,9 +55,11 @@ New in v1.0.1.0
 Fixed in v1.0.1.1
   - Verwalten Sie Ackerland mit mehreren Feldern, indem Sie diese nach jeder Aktualisierung einzeln anzeigen
 New in v1.0.1.2
-  - Polnische Übersetzung hinzufügen
-]]></de>
- <pl><![CDATA[
+  - Polnische und spanische Übersetzung hinzufügen
+New in v1.0.2.0
+  - Landfläche wird im Landbildschirm der Kartenübersicht angezeigt
+		]]></de>
+		 <pl><![CDATA[
 Wyświetlaj dodatkowe informacje o polu na panelu informacyjnym podczas chodzenia po polu:
   - Teren pola na danym grunucie
   - Teren danego gruntu
@@ -64,9 +70,11 @@ Wyświetlaj dodatkowe informacje o polu na panelu informacyjnym podczas chodzeni
 Nowe w  v1.0.1.0
   - Dodano przypuszczalną ilość zbiorów i potencjalny zysk
 Naprawione w v1.0.1.1
-  -  Zarzadzaj gruntami o wielu polach poprzez pokazywanie ich jeden za drugim w trybie odświeżania
+  - Zarzadzaj gruntami o wielu polach poprzez pokazywanie ich jeden za drugim w trybie odświeżania
 Nowe w  v1.0.1.2
-  -  Dodawanie polskiego tłumaczenia
+  - Dodawanie polskiego i hiszpańskiego tłumaczenia
+Nowe w  v1.0.2.0
+  - Obszar lądowy wyświetlany na ekranie lądowania Przegląd mapy
 ]]></pl>
         <es><![CDATA[
 Muestra información adicional sobre el campo que estás:
@@ -80,6 +88,10 @@ Nuevo en v1.0.1.0
   - Añadida Cantidad potencial de cosecha y rendimiento
 Arreglado en v1.0.1.1
   - Administre tierras de cultivo con varios campos mostrándolos uno por uno después de cada actualización.
+Nuevo en v1.0.1.2
+  - Añadida traducción al español y al polaco
+Nuevo en v1.0.2.0
+  - Área del terreno en la pantalla de terreno de la Vista general del mapa
 ]]></es>
     </description>
 	<iconFilename>icon_AdditionalFieldInfo.dds</iconFilename>
@@ -103,6 +115,13 @@ Arreglado en v1.0.1.1
 			<de>Land Fläche</de>
 			<pl>Grunt</pl>
 			<es>Area de la parcela</es>
+		</text>
+		<text name="additionalFieldInfo_AREA">
+			<fr>Superficie</fr>
+			<en>Area</en>
+			<de>Fläche</de>
+			<pl>Grunt</pl>
+			<es>Area</es>
 		</text>
 		<text name="additionalFieldInfo_PRICE_ON_AREA">
 			<fr>Prix à l'%s</fr>

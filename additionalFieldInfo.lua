@@ -1,5 +1,42 @@
 ﻿AdditionalFieldInfo = {};
 
+function AdditionalFieldInfo:buildFarmlandsMapOverlay(selectedFarmland)
+	if selectedFarmland then
+		local farmLandArea =  g_i18n:formatArea(selectedFarmland.areaInHa, 2)
+		self.selectedFarmlandAreaInHa = farmLandArea
+	end
+end
+MapOverlayGenerator.buildFarmlandsMapOverlay = Utils.appendedFunction(MapOverlayGenerator.buildFarmlandsMapOverlay, AdditionalFieldInfo.buildFarmlandsMapOverlay)
+
+function AdditionalFieldInfo:onFarmlandOverlayFinished(a, b, c, d)
+	if self.mapOverlayGenerator.selectedFarmlandAreaInHa then
+		if self.areaText == nil then
+			local areaLabel = self.farmlandValueText:clone(self)
+			areaLabel:setPosition(0, 0.04)
+			self.farmlandValueText.parent:addElement(areaLabel)
+			areaLabel:setText(g_i18n:getText("additionalFieldInfo_AREA")..":")
+			areaLabel:setTextColor(1, 1, 1, 1)
+			self.areaLabel = areaLabel
+			local areaText = self.farmlandValueText:clone(self)
+			areaText:setPosition(0.09, 0.04)
+			self.farmlandValueText.parent:addElement(areaText)
+			areaText:setText(self.mapOverlayGenerator.selectedFarmlandAreaInHa)
+			self.areaText = areaText
+		else
+			local areaText = self.areaText
+			areaText:setText(self.mapOverlayGenerator.selectedFarmlandAreaInHa)
+		end
+	else
+		if self.areaText then
+			self:removeElement(self.areaText)
+		end
+		if self.areaLabel then
+			self:removeElement(self.areaLabel)
+		end
+	end
+end
+InGameMenuMapFrame.onFarmlandOverlayFinished = Utils.prependedFunction(InGameMenuMapFrame.onFarmlandOverlayFinished, AdditionalFieldInfo.onFarmlandOverlayFinished)
+
 function AdditionalFieldInfo:setFruitType(fruitTypeIndex, fruitGrowthState)
 	if fruitTypeIndex > 0 then
 		self.fruitType = self.fruitTypeManager:getFruitTypeByIndex(fruitTypeIndex)
@@ -21,6 +58,11 @@ FieldInfoDisplay.setFruitType = Utils.prependedFunction(FieldInfoDisplay.setFrui
 function AdditionalFieldInfo:onFieldDataUpdateFinished(data)
 	if data == nil then return; end
 
+	-- if self.displayDebug == nil  then self.displayDebug = true end
+	-- if self.displayDebug then
+	-- 	DebugUtil.printTableRecursively(g_i18n, " ", 1, 2);
+	-- 	self.displayDebug = false
+	-- end
 	if self.currentField == nil then self.currentField = 1 end
 
 	self:clearCustomText()
