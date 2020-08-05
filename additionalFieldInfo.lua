@@ -63,7 +63,7 @@ function AdditionalFieldInfo:onFieldDataUpdateFinished(data)
 	-- 	DebugUtil.printTableRecursively(g_i18n, " ", 1, 2);
 	-- 	self.displayDebug = false
 	-- end
-	if self.currentField == nil then self.currentField = 1 end
+	if self.currentField == nil then self.currentField = 4 end
 
 	self:clearCustomText()
 	for _, farmLand in pairs(g_fieldManager.farmlandIdFieldMapping) do
@@ -74,8 +74,8 @@ function AdditionalFieldInfo:onFieldDataUpdateFinished(data)
 		local isOwned = false
 		for fieldIndex, field in pairs(farmLand) do
 			if field.farmland.id == data.farmlandId then
-				if self.currentField > #farmLand then self.currentField = 1 end
-				if fieldIndex == self.currentField then
+				if self.currentField > (4 * #farmLand + 2) then self.currentField = 4 end
+				if fieldIndex == math.floor(self.currentField / 4) then
 					bFound = true
 					local fieldArea =  g_i18n:formatArea(field.fieldArea, 2)
 					fieldAreaSum = fieldAreaSum + field.fieldArea

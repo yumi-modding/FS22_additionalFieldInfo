@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="47">
+<modDesc descVersion="51">
     <author>yumi</author>
-    <version>1.0.2.0</version>		
+    <version>1.0.2.1</version>		
 	<title>
         <en>Additional Field Info</en>
 		<fr>Informations De Champ Supplémentaires</fr>
@@ -24,6 +24,8 @@ New in v1.0.1.2
   - Adding polish and spanish translation
 New in v1.0.2.0
   - Land area displayed in Map overview land screen
+Fixed in v1.0.2.1
+  - Slow down display refresh for farmlands with several fields
 		]]></en>
 		<fr><![CDATA[
 Affiche des informations supplémentaires dans le panneau lorsque vous parcourez un champ à pied:
@@ -41,6 +43,8 @@ New in v1.0.1.2
   - Ajout de la traduction polonaise et espagnole
 New in v1.0.2.0
   - Superficie du terrain affichée dans l'écran des terrains du menu Aperçu de la carte
+Fixed in v1.0.2.1
+  - Ralentit le rafraîchissement de l'affichage pour les terrains contenant plusieurs champs
 		]]></fr>
 		<de><![CDATA[
 Zeigen Sie zusätzliche Informationen im Feldinfofenster an, wenn Sie durch ein Feld gehen:
@@ -58,6 +62,8 @@ New in v1.0.1.2
   - Polnische und spanische Übersetzung hinzufügen
 New in v1.0.2.0
   - Landfläche wird im Landbildschirm der Kartenübersicht angezeigt
+Fixed in v1.0.2.1
+  - Verlangsamen Sie die Aktualisierung der Anzeige für Ackerland mit mehreren Feldern
 		]]></de>
 		 <pl><![CDATA[
 Wyświetlaj dodatkowe informacje o polu na panelu informacyjnym podczas chodzenia po polu:
@@ -75,6 +81,8 @@ Nowe w  v1.0.1.2
   - Dodawanie polskiego i hiszpańskiego tłumaczenia
 Nowe w  v1.0.2.0
   - Obszar lądowy wyświetlany na ekranie lądowania Przegląd mapy
+Fixed in v1.0.2.1
+  - Spowolnij odświeżanie ekranu dla pól uprawnych z kilkoma polami
 ]]></pl>
         <es><![CDATA[
 Muestra información adicional sobre el campo que estás:
@@ -92,6 +100,8 @@ Nuevo en v1.0.1.2
   - Añadida traducción al español y al polaco
 Nuevo en v1.0.2.0
   - Área del terreno en la pantalla de terreno de la Vista general del mapa
+Fixed in v1.0.2.1
+  - Reduzca la velocidad de actualización de la pantalla para tierras de cultivo con varios campos
 ]]></es>
     </description>
 	<iconFilename>icon_AdditionalFieldInfo.dds</iconFilename>
