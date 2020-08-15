@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="51">
     <author>yumi</author>
-    <version>1.0.2.1</version>		
-	<title>
+    <version>1.0.2.1</version>
+    <title>
         <en>Additional Field Info</en>
-		<fr>Informations De Champ Supplémentaires</fr>
-		<de>Zusätzliche Feldinfo</de>
+        <fr>Informations De Champ Supplémentaires</fr>
+        <de>Zusätzliche Feldinfo</de>
     </title>
     <description>
         <en><![CDATA[
@@ -26,8 +26,8 @@ New in v1.0.2.0
   - Land area displayed in Map overview land screen
 Fixed in v1.0.2.1
   - Slow down display refresh for farmlands with several fields
-		]]></en>
-		<fr><![CDATA[
+]]></en>
+        <fr><![CDATA[
 Affiche des informations supplémentaires dans le panneau lorsque vous parcourez un champ à pied:
   - Superficie de chaque champ du terrain actuel
   - Superficie du terrain actuel
@@ -45,8 +45,8 @@ New in v1.0.2.0
   - Superficie du terrain affichée dans l'écran des terrains du menu Aperçu de la carte
 Fixed in v1.0.2.1
   - Ralentit le rafraîchissement de l'affichage pour les terrains contenant plusieurs champs
-		]]></fr>
-		<de><![CDATA[
+]]></fr>
+        <de><![CDATA[
 Zeigen Sie zusätzliche Informationen im Feldinfofenster an, wenn Sie durch ein Feld gehen:
   - Fläche jedes Feldes im aktuellen Land
   - Aktuelle Landfläche
@@ -64,8 +64,8 @@ New in v1.0.2.0
   - Landfläche wird im Landbildschirm der Kartenübersicht angezeigt
 Fixed in v1.0.2.1
   - Verlangsamen Sie die Aktualisierung der Anzeige für Ackerland mit mehreren Feldern
-		]]></de>
-		 <pl><![CDATA[
+]]></de>
+         <pl><![CDATA[
 Wyświetlaj dodatkowe informacje o polu na panelu informacyjnym podczas chodzenia po polu:
   - Teren pola na danym grunucie
   - Teren danego gruntu
@@ -104,56 +104,56 @@ Fixed in v1.0.2.1
   - Reduzca la velocidad de actualización de la pantalla para tierras de cultivo con varios campos
 ]]></es>
     </description>
-	<iconFilename>icon_AdditionalFieldInfo.dds</iconFilename>
+    <iconFilename>modIcon.dds</iconFilename>
     <multiplayer supported="true"/>
-	
-	<extraSourceFiles>
-		<sourceFile filename="additionalFieldInfo.lua" />	
+    
+    <extraSourceFiles>
+        <sourceFile filename="additionalFieldInfo.lua" />
     </extraSourceFiles>
 
-	<l10n>
-		<text name="additionalFieldInfo_FIELD_AREA">
-			<fr>Superficie du champ %d</fr>
-			<en>Field %d Area</en>
-			<de>Feld %d Fläche</de>
-			<pl>Pole nr %d</pl>
-			<es>Area del campo %d</es>
-		</text>
-		<text name="additionalFieldInfo_FARMLAND_AREA">
-			<fr>Superficie du terrain</fr>
-			<en>Land Area</en>
-			<de>Land Fläche</de>
-			<pl>Grunt</pl>
-			<es>Area de la parcela</es>
-		</text>
-		<text name="additionalFieldInfo_AREA">
-			<fr>Superficie</fr>
-			<en>Area</en>
-			<de>Fläche</de>
-			<pl>Grunt</pl>
-			<es>Area</es>
-		</text>
-		<text name="additionalFieldInfo_PRICE_ON_AREA">
-			<fr>Prix à l'%s</fr>
-			<en>Price per %s</en>
-			<de>Preis pro %s</de>
-			<pl>Cena za %s</pl>
-			<es>Precio por %s</es>
-		</text>
-		<text name="additionalFieldInfo_POTENTIAL_HARVEST">
-			<fr>Récolte potentielle</fr>
-			<en>Potential harvest quantity</en>
-			<de>Potenzielle Erntemenge</de>
-			<pl>Potencjalna ilość zbiorów</pl>
-			<es>A cosechar aprox.</es>
-		</text>
-		<text name="additionalFieldInfo_POTENTIAL_YIELD">
-			<fr>Rendement potentiel</fr>
-			<en>Potential yield</en>
-			<de>Möglicher Ertrag</de>
-			<pl>Potencjalny zysk</pl>
-			<es>Posible rendimiento</es>
-		</text>
-	</l10n>
+    <l10n>
+        <text name="additionalFieldInfo_FIELD_AREA">
+            <fr>Superficie du champ %d</fr>
+            <en>Field %d Area</en>
+            <de>Feld %d Fläche</de>
+            <pl>Pole nr %d</pl>
+            <es>Area del campo %d</es>
+        </text>
+        <text name="additionalFieldInfo_FARMLAND_AREA">
+            <fr>Superficie du terrain</fr>
+            <en>Land Area</en>
+            <de>Landfläche</de>
+            <pl>Grunt</pl>
+            <es>Area de la parcela</es>
+        </text>
+        <text name="additionalFieldInfo_AREA">
+            <fr>Superficie</fr>
+            <en>Area</en>
+            <de>Fläche</de>
+            <pl>Grunt</pl>
+            <es>Area</es>
+        </text>
+        <text name="additionalFieldInfo_PRICE_ON_AREA">
+            <fr>Prix à l'%s</fr>
+            <en>Price per %s</en>
+            <de>Preis pro %s</de>
+            <pl>Cena za %s</pl>
+            <es>Precio por %s</es>
+        </text>
+        <text name="additionalFieldInfo_POTENTIAL_HARVEST">
+            <fr>Récolte potentielle</fr>
+            <en>Potential harvest quantity</en>
+            <de>Potenzielle Erntemenge</de>
+            <pl>Potencjalna ilość zbiorów</pl>
+            <es>A cosechar aprox.</es>
+        </text>
+        <text name="additionalFieldInfo_POTENTIAL_YIELD">
+            <fr>Rendement potentiel</fr>
+            <en>Potential yield</en>
+            <de>Möglicher Ertrag</de>
+            <pl>Potencjalny zysk</pl>
+            <es>Posible rendimiento</es>
+        </text>
+    </l10n>
 
 </modDesc>
