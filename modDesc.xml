@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="53">
     <author>yumi</author>
-    <version>1.0.2.2</version>
+    <version>1.0.2.3</version>
     <title>
         <en>Additional Field Info</en>
         <fr>Informations De Champ Supplémentaires</fr>
@@ -29,6 +29,8 @@ Fixed in v1.0.2.1
   - Slow down display refresh for farmlands with several fields
 New in v1.0.2.2
   - Adding russian translation
+Fixed in v1.0.2.3
+  - Fix compatibility with Precision Farming and remove redundant information
 ]]></en>
         <fr><![CDATA[
 Affiche des informations supplémentaires dans le panneau lorsque vous parcourez un champ à pied:
@@ -50,6 +52,8 @@ Fixed in v1.0.2.1
   - Ralentit le rafraîchissement de l'affichage pour les terrains contenant plusieurs champs
 New in v1.0.2.2
   - Ajout de la traduction russe
+Fixed in v1.0.2.3
+  - Compatibilité avec Precision Farming et suppression des informations redondantes
 ]]></fr>
         <de><![CDATA[
 Zeigen Sie zusätzliche Informationen im Feldinfofenster an, wenn Sie durch ein Feld gehen:
@@ -71,6 +75,8 @@ Fixed in v1.0.2.1
   - Verlangsamen Sie die Aktualisierung der Anzeige für Ackerland mit mehreren Feldern
 New in v1.0.2.2
   - Russische Übersetzung hinzufügen
+Fixed in v1.0.2.3
+  - Korrigieren Sie die Kompatibilität mit Precision Farming und entfernen Sie redundante Informationen 
 ]]></de>
          <pl><![CDATA[
 Wyświetlaj dodatkowe informacje o polu na panelu informacyjnym podczas chodzenia po polu:
@@ -88,10 +94,12 @@ Nowe w  v1.0.1.2
   - Dodawanie polskiego i hiszpańskiego tłumaczenia
 Nowe w  v1.0.2.0
   - Obszar lądowy wyświetlany na ekranie lądowania Przegląd mapy
-Fixed in v1.0.2.1
+Naprawione in v1.0.2.1
   - Spowolnij odświeżanie ekranu dla pól uprawnych z kilkoma polami
 Nowe w  v1.0.2.2
   - Dodanie tłumaczenia rosyjskiego
+Naprawione in v1.0.2.3
+  - Napraw zgodność z Precision Farming i usuń zbędne informacje 
 ]]></pl>
         <es><![CDATA[
 Muestra información adicional sobre el campo que estás:
@@ -109,10 +117,12 @@ Nuevo en v1.0.1.2
   - Añadida traducción al español y al polaco
 Nuevo en v1.0.2.0
   - Área del terreno en la pantalla de terreno de la Vista general del mapa
-Fixed in v1.0.2.1
+Arreglado in v1.0.2.1
   - Reduzca la velocidad de actualización de la pantalla para tierras de cultivo con varios campos
 Nuevo en v1.0.2.2
   - Añadida traducción al ruso
+Arreglado in v1.0.2.3
+  - Compatibilidad con Precision Farming y elimine la información redundante 
 ]]></es>
         <ru><![CDATA[
 Отображение дополнительной информации на панели информации о поле при проходе по полю:
@@ -133,7 +143,8 @@ Nuevo en v1.0.2.2
 Исправлено в v1.0.2.1
    - Замедленное обновление дисплея для сельхозугодий с несколькими полями
 Новое в v1.0.2.2
-   - Добавление русского перевода
+Исправлено в v1.0.2.3
+   - Исправьте совместимость с Precision Farming и удалите лишнюю информацию
 ]]></ru>
     </description>
     <iconFilename>modIcon.dds</iconFilename>
@@ -148,7 +159,7 @@ Nuevo en v1.0.2.2
             <fr>Superficie du champ %d</fr>
             <en>Field %d Area</en>
             <de>Feld %d Fläche</de>
-            <pl>Pole nr %d</pl>
+            <pl>Powierzchnia pola %d</pl>
             <es>Area del campo %d</es>
             <ru>Площадь поля %d</ru>
         </text>
@@ -156,7 +167,7 @@ Nuevo en v1.0.2.2
             <fr>Superficie du terrain</fr>
             <en>Land Area</en>
             <de>Landfläche</de>
-            <pl>Grunt</pl>
+            <pl>Powierzchnia terenu</pl>
             <es>Area de la parcela</es>
             <ru>Площадь участка</ru>
         </text>
@@ -164,7 +175,7 @@ Nuevo en v1.0.2.2
             <fr>Superficie</fr>
             <en>Area</en>
             <de>Fläche</de>
-            <pl>Grunt</pl>
+            <pl>Teren</pl>
             <es>Area</es>
             <ru>Площадь</ru>
         </text>
@@ -180,7 +191,7 @@ Nuevo en v1.0.2.2
             <fr>Récolte potentielle</fr>
             <en>Potential harvest quantity</en>
             <de>Potenzielle Erntemenge</de>
-            <pl>Potencjalna ilość zbiorów</pl>
+            <pl>Potencjalny plon</pl>
             <es>A cosechar aprox.</es>
             <ru>Возможный урожай</ru>
         </text>
