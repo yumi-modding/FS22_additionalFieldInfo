@@ -56,17 +56,18 @@ function AdditionalFieldInfo:setFruitType(fruitTypeIndex, fruitGrowthState)
 end
 FieldInfoDisplay.setFruitType = Utils.prependedFunction(FieldInfoDisplay.setFruitType, AdditionalFieldInfo.setFruitType)
 
-function AdditionalFieldInfo:clearCustomText(fieldInfo)
+function AdditionalFieldInfo:clearCustomText(fieldInfo, customRows)
     for i = 1, FieldInfoDisplay.MAX_ROW_COUNT do
         local row = fieldInfo.rows[i]
 
-        if row.infoType == FieldInfoDisplay.INFO_TYPE.CUSTOM and
-            row.leftText == g_i18n:getText("additionalFieldInfo_FIELD_AREA") or
-            row.leftText == g_i18n:getText("additionalFieldInfo_FARMLAND_AREA") or
-            row.leftText == string.format(g_i18n:getText("additionalFieldInfo_PRICE_ON_AREA"), g_i18n:getAreaUnit()) or
-            row.leftText == g_i18n:getText("additionalFieldInfo_POTENTIAL_YIELD") or
-            row.leftText == g_i18n:getText("additionalFieldInfo_POTENTIAL_HARVEST") then
-            fieldInfo:clearInfoRow(row)
+        if row.infoType == FieldInfoDisplay.INFO_TYPE.CUSTOM and customRows ~= nil then
+            for j = 1, #customRows do
+                if customRows[j] == i then
+                    print(row)
+                    fieldInfo:clearInfoRow(row)
+                    break
+                end
+            end
         end
     end
 end
@@ -81,7 +82,9 @@ function AdditionalFieldInfo:onFieldDataUpdateFinished(data)
     -- end
     if self.currentField == nil then self.currentField = 4 end
 
-    AdditionalFieldInfo:clearCustomText(self)
+    AdditionalFieldInfo:clearCustomText(self, self.customRows)
+    self.customRows = {}
+
     for _, farmLand in pairs(g_fieldManager.farmlandIdFieldMapping) do
         local bFound = false
         local farmLandArea = 0.
@@ -101,7 +104,7 @@ function AdditionalFieldInfo:onFieldDataUpdateFinished(data)
                     local Field_xx_Area = string.format(g_i18n:getText("additionalFieldInfo_FIELD_AREA"), field.fieldId)
                     if not g_modIsLoaded[AdditionalFieldInfo.PrecisionFarming] then
                         -- Display Area of each field in the current land
-                        self:addCustomText(Field_xx_Area, fieldArea)
+                        table.insert(self.customRows, self:addCustomText(Field_xx_Area, fieldArea))
                     end
                     if self.potentialHarvestQty ~= nil and self.fruitType ~= nil then
                         -- local oldmultiplier = g_currentMission:getHarvestScaleMultiplier(self.fruitType, data.fertilizerFactor, data.plowFactor, data.cultivatorFactor, data.weedFactor)
@@ -115,13 +118,12 @@ function AdditionalFieldInfo:onFieldDataUpdateFinished(data)
                         -- Display Potential harvest quantity
                         local Potential_Harvest = g_i18n:getText("additionalFieldInfo_POTENTIAL_HARVEST")
                         local potentialHarvestQty = self.potentialHarvestQty * field.fieldArea * multiplier * 10000 -- ha to sqm
-                        self:addCustomText(Potential_Harvest, g_i18n:formatVolume(potentialHarvestQty, 0))
+                        table.insert(self.customRows, self:addCustomText(Potential_Harvest, g_i18n:formatVolume(potentialHarvestQty, 0)))
 
                         -- Display Potential yield
                         local Potential_Yield = g_i18n:getText("additionalFieldInfo_POTENTIAL_YIELD")
                         local potentialYield = (potentialHarvestQty * massPerLiter) / g_i18n:getArea(field.fieldArea)
-                        self:addCustomText(Potential_Yield, string.format("%1.2f T/"..tostring(g_i18n:getAreaUnit()), potentialYield))
-
+                        table.insert(self.customRows, self:addCustomText(Potential_Yield, string.format("%1.2f T/"..tostring(g_i18n:getAreaUnit()), potentialYield)))
                     end
                 end
             end
@@ -131,14 +133,14 @@ function AdditionalFieldInfo:onFieldDataUpdateFinished(data)
             local Farm_Land_Area = g_i18n:getText("additionalFieldInfo_FARMLAND_AREA")
             if not g_modIsLoaded[AdditionalFieldInfo.PrecisionFarming] then
                 -- Display Current land area
-                self:addCustomText(Farm_Land_Area, farmLandArea)
+                table.insert(self.customRows, self:addCustomText(Farm_Land_Area, farmLandArea))
             end
             if fieldAreaSum > 0. and not isOwned then
                 local areaUnit = tostring(g_i18n:getAreaUnit())
                 local pricePerArea = farmLandPrice / g_i18n:getArea(fieldAreaSum)
                 local Price_On_Area = string.format(g_i18n:getText("additionalFieldInfo_PRICE_ON_AREA"), g_i18n:getAreaUnit())
                 -- Display Price per ha (per ac) of the cultivated area on land you don't own
-                self:addCustomText(Price_On_Area, g_i18n:formatMoney(pricePerArea, 0)..'/'..areaUnit)
+                table.insert(self.customRows, self:addCustomText(Price_On_Area, g_i18n:formatMoney(pricePerArea, 0)..'/'..areaUnit))
             end
             break
         end
