@@ -63,7 +63,6 @@ function AdditionalFieldInfo:clearCustomText(fieldInfo, customRows)
         if row.infoType == FieldInfoDisplay.INFO_TYPE.CUSTOM and customRows ~= nil then
             for j = 1, #customRows do
                 if customRows[j] == i then
-                    print(row)
                     fieldInfo:clearInfoRow(row)
                     break
                 end
