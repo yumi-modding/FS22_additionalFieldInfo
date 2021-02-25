@@ -61,6 +61,9 @@ function AdditionalFieldInfo:clearCustomText(fieldInfo)
         local row = fieldInfo.rows[i]
 
         if row.infoType == FieldInfoDisplay.INFO_TYPE.CUSTOM and
+            row.leftText == g_i18n:getText("additionalFieldInfo_FIELD_AREA") or
+            row.leftText == g_i18n:getText("additionalFieldInfo_FARMLAND_AREA") or
+            row.leftText == string.format(g_i18n:getText("additionalFieldInfo_PRICE_ON_AREA"), g_i18n:getAreaUnit()) or
             row.leftText == g_i18n:getText("additionalFieldInfo_POTENTIAL_YIELD") or
             row.leftText == g_i18n:getText("additionalFieldInfo_POTENTIAL_HARVEST") then
             fieldInfo:clearInfoRow(row)

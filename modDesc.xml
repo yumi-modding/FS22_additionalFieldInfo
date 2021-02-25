@@ -6,7 +6,7 @@
         <en>Additional Field Info</en>
         <fr>Informations De Champ Supplémentaires</fr>
         <de>Zusätzliche Feldinfo</de>
-        <ru>Дополнительная информация о поле</ru>
+        <ru>Дополнительная Информация О Поле</ru>
     </title>
     <description>
         <en><![CDATA[
@@ -68,35 +68,35 @@ New in v1.0.1.0
 Fixed in v1.0.1.1
   - Verwalten Sie Ackerland mit mehreren Feldern, indem Sie diese nach jeder Aktualisierung einzeln anzeigen
 New in v1.0.1.2
-  - Polnische und spanische Übersetzung hinzufügen
+  - Polnische und spanische Übersetzung hinzugefügt
 New in v1.0.2.0
-  - Landfläche wird im Landbildschirm der Kartenübersicht angezeigt
+  - Landfläche, die in der Kartenübersicht Land angezeigt wird
 Fixed in v1.0.2.1
-  - Verlangsamen Sie die Aktualisierung der Anzeige für Ackerland mit mehreren Feldern
+  - Verlangsamte Aktualisierung der Anzeige bei Ackerland auf mehreren Feldern
 New in v1.0.2.2
-  - Russische Übersetzung hinzufügen
+  - Russische Übersetzung hinzugefügt
 Fixed in v1.0.2.3
-  - Korrigieren Sie die Kompatibilität mit Precision Farming und entfernen Sie redundante Informationen 
+  - Problem mit Precision Farming behoben und redundante Informationen entfernt
 ]]></de>
-         <pl><![CDATA[
+        <pl><![CDATA[
 Wyświetlaj dodatkowe informacje o polu na panelu informacyjnym podczas chodzenia po polu:
   - Teren pola na danym grunucie
   - Teren danego gruntu
-  - Cenę za  ha (za akr) terenu po kultywacji na nieposiadanych ziemiach 
+  - Cenę za ha (za akr) terenu po kultywacji na nieposiadanych ziemiach 
   - Potencjalny zysk i przypuszczalną ilość zbiorów na polach gotowych na zbiory
 
 ==== LISTA ZMIAN ====
-Nowe w  v1.0.1.0
+Nowe w v1.0.1.0
   - Dodano przypuszczalną ilość zbiorów i potencjalny zysk
 Naprawione w v1.0.1.1
   - Zarzadzaj gruntami o wielu polach poprzez pokazywanie ich jeden za drugim w trybie odświeżania
-Nowe w  v1.0.1.2
+Nowe w v1.0.1.2
   - Dodawanie polskiego i hiszpańskiego tłumaczenia
-Nowe w  v1.0.2.0
+Nowe w v1.0.2.0
   - Obszar lądowy wyświetlany na ekranie lądowania Przegląd mapy
 Naprawione in v1.0.2.1
   - Spowolnij odświeżanie ekranu dla pól uprawnych z kilkoma polami
-Nowe w  v1.0.2.2
+Nowe w v1.0.2.2
   - Dodanie tłumaczenia rosyjskiego
 Naprawione in v1.0.2.3
   - Napraw zgodność z Precision Farming i usuń zbędne informacje 
@@ -126,25 +126,25 @@ Arreglado in v1.0.2.3
 ]]></es>
         <ru><![CDATA[
 Отображение дополнительной информации на панели информации о поле при проходе по полю:
-   - Площадь каждого поля на участке
-   - Площадь земельного участка
-   - Цена за гектар (за акр) посевной площади на земле, которой вы не владеете
-   - Возможное количество урожая и урожайность на готовых к уборке полях
+  - Площадь каждого поля на участке
+  - Площадь земельного участка
+  - Цена за гектар (за акр) посевной площади на земле, которой вы не владеете
+  - Возможное количество урожая и урожайность на готовых к уборке полях
 
 ==== ИЗМЕНЕНИЯ ====
 Новое в v1.0.1.0
-   - Возможный урожай и урожайность
+  - Возможный урожай и урожайность
 Исправлено в v1.0.1.1
-   - Управляйте сельхозугодьями с несколькими полями, показывая их одно за другим в режиме обновления
+  - Управляйте сельхозугодьями с несколькими полями, показывая их одно за другим в режиме обновления
 Новое в v1.0.1.2
-   - Добавление польского и испанского переводов
+  - Добавление польского и испанского переводов
 Новое в v1.0.2.0
-   - Площадь выделенного земельного участка отображается на экране обзора карты.
+  - Площадь выделенного земельного участка отображается на экране обзора карты.
 Исправлено в v1.0.2.1
-   - Замедленное обновление дисплея для сельхозугодий с несколькими полями
+  - Замедленное обновление дисплея для сельхозугодий с несколькими полями
 Новое в v1.0.2.2
 Исправлено в v1.0.2.3
-   - Исправьте совместимость с Precision Farming и удалите лишнюю информацию
+  - Исправьте совместимость с Precision Farming и удалите лишнюю информацию
 ]]></ru>
     </description>
     <iconFilename>modIcon.dds</iconFilename>
