@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="53">
+<modDesc descVersion="63">
     <author>yumi</author>
-    <version>1.0.2.4</version>
+    <version>1.0.0.0</version>
     <title>
         <en>Additional Field Info</en>
         <fr>Informations De Champ Supplémentaires</fr>
@@ -14,149 +14,36 @@ Display additional info in the field info panel when walking through a field:
   - Area of each field in the current land
   - Current land area
   - Price per ha (per ac) of the cultivated area on land you don't own
-  - Potential harvest quantity and yield on ready to harvest fields
-
-==== CHANGELOG ====
-New in v1.0.1.0
-  - Potential harvest quantity and yield added
-Fixed in v1.0.1.1
-  - Manage farmlands with several fields by showing them one by one after each refresh
-New in v1.0.1.2
-  - Adding polish and spanish translation
-New in v1.0.2.0
-  - Land area displayed in Map overview land screen
-Fixed in v1.0.2.1
-  - Slow down display refresh for farmlands with several fields
-New in v1.0.2.2
-  - Adding russian translation
-Fixed in v1.0.2.3
-  - Fix compatibility with Precision Farming and remove redundant information
-Fixed in v1.0.2.4
-  - Fix compatibility with Info Menu mod and remove redundant information
 ]]></en>
         <fr><![CDATA[
 Affiche des informations supplémentaires dans le panneau lorsque vous parcourez un champ à pied:
   - Superficie de chaque champ du terrain actuel
   - Superficie du terrain actuel
   - Prix par ha (par ac) de la partie cultivée des terrains que vous ne possédez pas
-  - Récolte et rendement potentiel dans les champs prêt à récolter
-
-==== CHANGELOG ====
-New in v1.0.1.0
-  - Ajout de récolte et rendement potentiel
-Fixed in v1.0.1.1
-  - Gestion des terrains contenant plusieurs champs en affichant les informations de chacun alternativement
-New in v1.0.1.2
-  - Ajout de la traduction polonaise et espagnole
-New in v1.0.2.0
-  - Superficie du terrain affichée dans l'écran des terrains du menu Aperçu de la carte
-Fixed in v1.0.2.1
-  - Ralentit le rafraîchissement de l'affichage pour les terrains contenant plusieurs champs
-New in v1.0.2.2
-  - Ajout de la traduction russe
-Fixed in v1.0.2.3
-  - Compatibilité avec Precision Farming et suppression des informations redondantes
-Fixed in v1.0.2.4
-  - Compatibilité avec le mod Info Menu et suppression des informations redondantes
 ]]></fr>
         <de><![CDATA[
 Zeigen Sie zusätzliche Informationen im Feldinfofenster an, wenn Sie durch ein Feld gehen:
   - Fläche jedes Feldes im aktuellen Land
   - Aktuelle Landfläche
   - Preis pro ha (pro ac) der Anbaufläche auf Land, das Sie nicht besitzen
-  - Potenzielle Erntemenge und Ertrag auf erntefertigen Feldern
-
-==== CHANGELOG ====
-New in v1.0.1.0
-  - Potenzielle Erntemenge und Ertrag hinzugefügt
-Fixed in v1.0.1.1
-  - Verwalten Sie Ackerland mit mehreren Feldern, indem Sie diese nach jeder Aktualisierung einzeln anzeigen
-New in v1.0.1.2
-  - Polnische und spanische Übersetzung hinzugefügt
-New in v1.0.2.0
-  - Landfläche, die in der Kartenübersicht Land angezeigt wird
-Fixed in v1.0.2.1
-  - Verlangsamte Aktualisierung der Anzeige bei Ackerland auf mehreren Feldern
-New in v1.0.2.2
-  - Russische Übersetzung hinzugefügt
-Fixed in v1.0.2.3
-  - Problem mit Precision Farming behoben und redundante Informationen entfernt
-Fixed in v1.0.2.4
-  - Problem mit Info Menu behoben und redundante Informationen entfernt
 ]]></de>
         <pl><![CDATA[
 Wyświetlaj dodatkowe informacje o polu na panelu informacyjnym podczas chodzenia po polu:
   - Teren pola na danym grunucie
   - Teren danego gruntu
   - Cenę za ha (za akr) terenu po kultywacji na nieposiadanych ziemiach 
-  - Potencjalny zysk i przypuszczalną ilość zbiorów na polach gotowych na zbiory
-
-==== LISTA ZMIAN ====
-Nowe w v1.0.1.0
-  - Dodano przypuszczalną ilość zbiorów i potencjalny zysk
-Naprawione w v1.0.1.1
-  - Zarzadzaj gruntami o wielu polach poprzez pokazywanie ich jeden za drugim w trybie odświeżania
-Nowe w v1.0.1.2
-  - Dodawanie polskiego i hiszpańskiego tłumaczenia
-Nowe w v1.0.2.0
-  - Obszar lądowy wyświetlany na ekranie lądowania Przegląd mapy
-Naprawione in v1.0.2.1
-  - Spowolnij odświeżanie ekranu dla pól uprawnych z kilkoma polami
-Nowe w v1.0.2.2
-  - Dodanie tłumaczenia rosyjskiego
-Naprawione in v1.0.2.3
-  - Napraw zgodność z Precision Farming i usuń zbędne informacje 
-Naprawione in v1.0.2.4
-  - Napraw zgodność z Info Menu i usuń zbędne informacje 
 ]]></pl>
         <es><![CDATA[
 Muestra información adicional sobre el campo que estás:
   - Área de cada campo en el terreno actual
   - Área de la zona actual
   - Precio por ha (per ac) del área cultivada en tierras que no son de su propiedad.
-  - Cantidad potencial de cosecha y rendimiento en campos listos para cosechar
-
-==== CHANGELOG ====
-Nuevo en v1.0.1.0
-  - Añadida Cantidad potencial de cosecha y rendimiento
-Arreglado en v1.0.1.1
-  - Administre tierras de cultivo con varios campos mostrándolos uno por uno después de cada actualización.
-Nuevo en v1.0.1.2
-  - Añadida traducción al español y al polaco
-Nuevo en v1.0.2.0
-  - Área del terreno en la pantalla de terreno de la Vista general del mapa
-Arreglado in v1.0.2.1
-  - Reduzca la velocidad de actualización de la pantalla para tierras de cultivo con varios campos
-Nuevo en v1.0.2.2
-  - Añadida traducción al ruso
-Arreglado in v1.0.2.3
-  - Compatibilidad con Precision Farming y elimine la información redundante 
-Arreglado in v1.0.2.4
-  - Compatibilidad con Info Menu y elimine la información redundante 
 ]]></es>
         <ru><![CDATA[
 Отображение дополнительной информации на панели информации о поле при проходе по полю:
   - Площадь каждого поля на участке
   - Площадь земельного участка
   - Цена за гектар (за акр) посевной площади на земле, которой вы не владеете
-  - Возможное количество урожая и урожайность на готовых к уборке полях
-
-==== ИЗМЕНЕНИЯ ====
-Новое в v1.0.1.0
-  - Возможный урожай и урожайность
-Исправлено в v1.0.1.1
-  - Управляйте сельхозугодьями с несколькими полями, показывая их одно за другим в режиме обновления
-Новое в v1.0.1.2
-  - Добавлены польский и испанский переводы
-Новое в v1.0.2.0
-  - Площадь выделенного земельного участка отображается на экране обзора карты.
-Исправлено в v1.0.2.1
-  - Замедленное обновление дисплея для сельхозугодий с несколькими полями
-Новое в v1.0.2.2
-Исправлено в v1.0.2.3
-  - Исправлена совместимость с Precision Farming и удалена лишняя информация
-Исправлено в v1.0.2.4
-  - Исправлена совместимость с Info Menu и удалена лишняя информация
 ]]></ru>
     </description>
     <iconFilename>modIcon.dds</iconFilename>
