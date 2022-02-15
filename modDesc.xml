@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="63">
     <author>yumi</author>
-    <version>1.0.0.0</version>
+    <version>1.0.1.0</version>
     <title>
         <en>Additional Field Info</en>
         <fr>Informations De Champ Supplémentaires</fr>
@@ -14,36 +14,66 @@ Display additional info in the field info panel when walking through a field:
   - Area of each field in the current land
   - Current land area
   - Price per ha (per ac) of the cultivated area on land you don't own
+  - Potential harvest quantity and yield on ready to harvest fields
+
+==== CHANGELOG ====
+New in v1.0.1.0
+  - Potential harvest quantity and yield added
 ]]></en>
         <fr><![CDATA[
 Affiche des informations supplémentaires dans le panneau lorsque vous parcourez un champ à pied:
   - Superficie de chaque champ du terrain actuel
   - Superficie du terrain actuel
   - Prix par ha (par ac) de la partie cultivée des terrains que vous ne possédez pas
+  - Récolte et rendement potentiel dans les champs prêt à récolter
+
+==== CHANGELOG ====
+New in v1.0.1.0
+  - Ajout de récolte et rendement potentiel
 ]]></fr>
         <de><![CDATA[
 Zeigen Sie zusätzliche Informationen im Feldinfofenster an, wenn Sie durch ein Feld gehen:
   - Fläche jedes Feldes im aktuellen Land
   - Aktuelle Landfläche
   - Preis pro ha (pro ac) der Anbaufläche auf Land, das Sie nicht besitzen
+  - Potenzielle Erntemenge und Ertrag auf erntefertigen Feldern
+
+==== CHANGELOG ====
+New in v1.0.1.0
+  - Potenzielle Erntemenge und Ertrag hinzugefügt
 ]]></de>
         <pl><![CDATA[
 Wyświetlaj dodatkowe informacje o polu na panelu informacyjnym podczas chodzenia po polu:
   - Teren pola na danym grunucie
   - Teren danego gruntu
   - Cenę za ha (za akr) terenu po kultywacji na nieposiadanych ziemiach 
+  - Potencjalny zysk i przypuszczalną ilość zbiorów na polach gotowych na zbiory
+
+==== LISTA ZMIAN ====
+Nowe w v1.0.1.0
+  - Dodano przypuszczalną ilość zbiorów i potencjalny zysk
 ]]></pl>
         <es><![CDATA[
 Muestra información adicional sobre el campo que estás:
   - Área de cada campo en el terreno actual
   - Área de la zona actual
   - Precio por ha (per ac) del área cultivada en tierras que no son de su propiedad.
+  - Cantidad potencial de cosecha y rendimiento en campos listos para cosechar
+
+==== CHANGELOG ====
+Nuevo en v1.0.1.0
+  - Añadida Cantidad potencial de cosecha y rendimiento
 ]]></es>
         <ru><![CDATA[
 Отображение дополнительной информации на панели информации о поле при проходе по полю:
   - Площадь каждого поля на участке
   - Площадь земельного участка
   - Цена за гектар (за акр) посевной площади на земле, которой вы не владеете
+  - Возможное количество урожая и урожайность на готовых к уборке полях
+
+==== ИЗМЕНЕНИЯ ====
+Новое в v1.0.1.0
+  - Возможный урожай и урожайность
 ]]></ru>
     </description>
     <iconFilename>modIcon.dds</iconFilename>
