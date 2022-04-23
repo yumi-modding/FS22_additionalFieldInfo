@@ -86,53 +86,53 @@ function AdditionalFieldInfo:fieldAddFarmland(data, box)
                     if not g_modIsLoaded[AdditionalFieldInfo.PrecisionFarming] then
                         -- Display Area of each field in the current land
                         box:addLine(Field_xx_Area, fieldArea)
+                    end
 
-                        if data.fruitTypeMax ~= nil then
-                            local fruitType = g_fruitTypeManager:getFruitTypeByIndex(data.fruitTypeMax)
-                            local fruitGrowthState = data.fruitStateMax
-                            if fruitType.minHarvestingGrowthState <= fruitGrowthState and fruitGrowthState <= fruitType.maxHarvestingGrowthState then
+                    if data.fruitTypeMax ~= nil then
+                        local fruitType = g_fruitTypeManager:getFruitTypeByIndex(data.fruitTypeMax)
+                        local fruitGrowthState = data.fruitStateMax
+                        if fruitType.minHarvestingGrowthState <= fruitGrowthState and fruitGrowthState <= fruitType.maxHarvestingGrowthState then
 
-                                local sprayFactor = data.fertilizerFactor
-                                local plowFactor = data.plowFactor
-                                local limeFactor = 1 - data.needsLimeFactor
-                                local weedFactor = data.weedFactor
-                                local stubbleFactor = data.stubbleFactor
-                                local rollerFactor = 1 - data.needsRollingFactor
-                                local missionInfo = g_currentMission.missionInfo
-                    
-                                if not missionInfo.plowingRequiredEnabled then
-                                    plowFactor = 1
-                                end
-                    
-                                if not missionInfo.limeRequired then
-                                    limeFactor = 1
-                                end
-                    
-                                if not missionInfo.weedsEnabled then
-                                    weedFactor = 1
-                                end
-                                local harvestMultiplier = g_currentMission:getHarvestScaleMultiplier(fruitType, sprayFactor, plowFactor, limeFactor, weedFactor, stubbleFactor, rollerFactor, 0)
-
-                                -- print("multiplier "..tostring(harvestMultiplier))
-                                local fillType = g_fruitTypeManager:getFillTypeByFruitTypeIndex(fruitType.index)
-                                local massPerLiter = fillType.massPerLiter
-                                local literPerSqm = fruitType.literPerSqm
-                                -- Display Potential harvest quantity
-                                local Potential_Harvest = g_i18n:getText("additionalFieldInfo_POTENTIAL_HARVEST")
-                                local potentialHarvestQty = literPerSqm * field.fieldArea * harvestMultiplier * 10000 -- ha to sqm
-                                -- potentialHarvestQty = g_missionManager:testHarvestField(field)
-                                local harvestMission = g_missionManager.fieldToMission[field.fieldId]
-                                if harvestMission then
-                                    potentialHarvestQty = harvestMission:getMaxCutLiters()
-                                    -- print("harvestMission: "..tostring(potentialHarvestQty))
-                                end
-                                box:addLine(Potential_Harvest, g_i18n:formatVolume(potentialHarvestQty, 0))
-        
-                                -- Display Potential yield
-                                local Potential_Yield = g_i18n:getText("additionalFieldInfo_POTENTIAL_YIELD")
-                                local potentialYield = (potentialHarvestQty * massPerLiter) / g_i18n:getArea(field.fieldArea)
-                                box:addLine(Potential_Yield, string.format("%1.2f T/"..tostring(g_i18n:getAreaUnit()), potentialYield))
+                            local sprayFactor = data.fertilizerFactor
+                            local plowFactor = data.plowFactor
+                            local limeFactor = 1 - data.needsLimeFactor
+                            local weedFactor = data.weedFactor
+                            local stubbleFactor = data.stubbleFactor
+                            local rollerFactor = 1 - data.needsRollingFactor
+                            local missionInfo = g_currentMission.missionInfo
+                
+                            if not missionInfo.plowingRequiredEnabled then
+                                plowFactor = 1
                             end
+                
+                            if not missionInfo.limeRequired then
+                                limeFactor = 1
+                            end
+                
+                            if not missionInfo.weedsEnabled then
+                                weedFactor = 1
+                            end
+                            local harvestMultiplier = g_currentMission:getHarvestScaleMultiplier(fruitType, sprayFactor, plowFactor, limeFactor, weedFactor, stubbleFactor, rollerFactor, 0)
+
+                            -- print("multiplier "..tostring(harvestMultiplier))
+                            local fillType = g_fruitTypeManager:getFillTypeByFruitTypeIndex(fruitType.index)
+                            local massPerLiter = fillType.massPerLiter
+                            local literPerSqm = fruitType.literPerSqm
+                            -- Display Potential harvest quantity
+                            local Potential_Harvest = g_i18n:getText("additionalFieldInfo_POTENTIAL_HARVEST")
+                            local potentialHarvestQty = literPerSqm * field.fieldArea * harvestMultiplier * 10000 -- ha to sqm
+                            -- potentialHarvestQty = g_missionManager:testHarvestField(field)
+                            local harvestMission = g_missionManager.fieldToMission[field.fieldId]
+                            if harvestMission then
+                                potentialHarvestQty = harvestMission:getMaxCutLiters()
+                                -- print("harvestMission: "..tostring(potentialHarvestQty))
+                            end
+                            box:addLine(Potential_Harvest, g_i18n:formatVolume(potentialHarvestQty, 0))
+    
+                            -- Display Potential yield
+                            local Potential_Yield = g_i18n:getText("additionalFieldInfo_POTENTIAL_YIELD")
+                            local potentialYield = (potentialHarvestQty * massPerLiter) / g_i18n:getArea(field.fieldArea)
+                            box:addLine(Potential_Yield, string.format("%1.2f T/"..tostring(g_i18n:getAreaUnit()), potentialYield))
                         end
                     end
                 end
