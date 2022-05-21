@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="65">
     <author>yumi</author>
-    <version>1.0.2.0</version>
+    <version>1.0.2.1</version>
     <title>
         <en>Additional Field Info</en>
         <fr>Informations De Champ Supplémentaires</fr>
@@ -21,6 +21,8 @@ New in v1.0.1.0
   - Potential harvest quantity and yield added
 Fixed in v1.0.2.0
   - Fix compatibility with Precision Farming
+Fixed in v1.0.2.1
+  - Fix field area not showing with Precision Farming
 ]]></en>
         <fr><![CDATA[
 Affiche des informations supplémentaires dans le panneau lorsque vous parcourez un champ à pied:
@@ -34,6 +36,8 @@ New in v1.0.1.0
   - Ajout de récolte et rendement potentiel
 Fixed in v1.0.2.0
   - Compatibilité avec Precision Farming
+Fixed in v1.0.2.1
+  - Affiche la superficie du champ avec Precision Farming
 ]]></fr>
         <de><![CDATA[
 Zeigen Sie zusätzliche Informationen im Feldinfofenster an, wenn Sie durch ein Feld gehen:
@@ -47,6 +51,8 @@ New in v1.0.1.0
   - Potenzielle Erntemenge und Ertrag hinzugefügt
 Fixed in v1.0.2.0
   - Korrigieren Sie die Kompatibilität mit Precision Farming
+Fixed in v1.0.2.1
+  - Fläche jedes Feldes mit Precision Farming
 ]]></de>
         <pl><![CDATA[
 Wyświetlaj dodatkowe informacje o polu na panelu informacyjnym podczas chodzenia po polu:
@@ -59,7 +65,9 @@ Wyświetlaj dodatkowe informacje o polu na panelu informacyjnym podczas chodzeni
 Nowe w v1.0.1.0
   - Dodano przypuszczalną ilość zbiorów i potencjalny zysk
 Naprawione in v1.0.2.0
-  - Napraw zgodność z Precision Farming i usuń zbędne informacje 
+  - Napraw zgodność z Precision Farming i usuń zbędne informacje
+Fixed in v1.0.2.1
+  - Teren pola na danym gruncie z Precision Farming
 ]]></pl>
         <es><![CDATA[
 Muestra información adicional sobre el campo que estás:
@@ -73,6 +81,8 @@ Nuevo en v1.0.1.0
   - Añadida Cantidad potencial de cosecha y rendimiento
 Arreglado in v1.0.2.3
   - Compatibilidad con Precision Farming
+Arreglado in v1.0.2.1
+  - Área de cada campo con Precision Farming
 ]]></es>
         <ru><![CDATA[
 Отображение дополнительной информации на панели информации о поле при проходе по полю:
@@ -86,6 +96,8 @@ Arreglado in v1.0.2.3
   - Возможный урожай и урожайность
 Исправлено в v1.0.2.0
   - Исправьте совместимость с Precision Farming
+Исправлено в v1.0.2.1
+  - Площадь каждого поля на участке с Precision Farming
 ]]></ru>
     </description>
     <iconFilename>modIcon.dds</iconFilename>

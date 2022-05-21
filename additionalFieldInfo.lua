@@ -83,10 +83,10 @@ function AdditionalFieldInfo:fieldAddFarmland(data, box)
                     farmLandPrice = field.farmland.price
                     isOwned = field.farmland.isOwned
                     local Field_xx_Area = string.format(g_i18n:getText("additionalFieldInfo_FIELD_AREA"), field.fieldId)
-                    if not g_modIsLoaded[AdditionalFieldInfo.PrecisionFarming] then
-                        -- Display Area of each field in the current land
-                        box:addLine(Field_xx_Area, fieldArea)
-                    end
+                    -- if not g_modIsLoaded[AdditionalFieldInfo.PrecisionFarming] then
+                    -- Display Area of each field in the current land
+                    box:addLine(Field_xx_Area, fieldArea)
+                    -- end
 
                     if data.fruitTypeMax ~= nil then
                         local fruitType = g_fruitTypeManager:getFruitTypeByIndex(data.fruitTypeMax)
